@@ -13,16 +13,23 @@
 <body>
     <!-- Header -->
     <header>Movie Reviews and GIFs
-        <div><button>My Favs</button></div>
+        <div>
+            <button id="myFavsBtn">My Favs</button>
+        </div>
     </header>
 
     <!-- Navbar -->
     <div class="navbar">
         <h2>What movie would you love to watch?</h2>
+        <!-- action = url -->
+        <!-- method = HTTP method that will be used-->
         <form action="#" method="get">
+            <!-- for = which form element the label is associated with -->
             <label for="search"></label>
+            <!-- type = the type of input -->
+            <!-- name = name of form element -->
             <input type="text" id="search" name="search">
-            <button type="submit" id='goButton'>Go</button>
+            <button type="submit" id='searchBtn'>Go</button>
         </form>
     </div>
 
@@ -30,7 +37,7 @@
     <div class="movieName"><h3>Movie Name</h3></div>
 
     <!-- Gif -->
-    <div class="gif">
+    <div class="movieGif">
         <p>Gif</p>
     </div>
 
@@ -55,8 +62,8 @@
             </div>
         </div>
 
-        <div class="addToFavs">
-            <button>Add to Favs</button>
+        <div id="addToFavs">
+            <button class="addToFavs">Add to Favs</button>
         </div>
     </div>
 </body>

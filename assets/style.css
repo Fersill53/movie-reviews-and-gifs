@@ -14,11 +14,14 @@ header {
 }
 
 .navbar {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
      background-color: #ddd;
      overflow: hidden;
-     padding: 25px 100px 25px 100px;
+     padding: 25px 100px 25px 170px;
      margin: 25px 50px 0px 50px;
-     height: 100px;
+     height: auto;
 }
 
 .navbar a:hover {
@@ -26,23 +29,31 @@ header {
      color: #fff;
 }
 
-#goButton {
+#searchBtn {
      width: 40px;
      height: 30px;
 }
 
-Button {
+#searchBtn:hover {
+     cursor: pointer
+}
+
+#myFavsBtn {
      width: 100px;
-     height: 35px;
+     height: 30px;
+}
+
+#myFavsBtn:hover {
+     cursor: pointer
 }
 
 #search {
-     width: 300px;
+     width: 250px;
      height: 25px;
 }
 
 form {
-     padding: 10px;
+     padding: 12px 0px 0px 15px;
      text-align: center;
      margin: 5px;
      
@@ -51,10 +62,10 @@ form {
 .movieName {
      width: 40%;
      text-align: center;
-     padding: 20px 5px 5px 5px;
-     margin: 0px 0px 0px 50px;
+     padding: 20px 0px 0px 0px;
+     margin: 0px 0px 0px 60px;
 }
-.gif {
+.movieGif {
      float: left;
      width: 38%;
      height: 300px;
@@ -87,6 +98,15 @@ form {
      height: 140px;
 }
 
-.addToFavs {
+#addToFavs {
      text-align: center;
+}
+
+.addToFavs {
+     width: 100px;
+     height: 30px;
+}
+
+.addToFavs:hover {
+     cursor: pointer;
 }
