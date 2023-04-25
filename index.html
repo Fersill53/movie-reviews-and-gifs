@@ -1,43 +1,63 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Movie Reviews and GIFs </title>
+    <!-- FontAwesome -->
+    <abbr rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Movie Reviews and GIFs</title>
 </head>
+
 <body>
-    <header>
-        <h1>
-        Movie Reviews and GIFs 
-        </h1>
-        <button>Favorites</button>
+    <!-- Header -->
+    <header>Movie Reviews and GIFs
+        <div><button>My Favs</button></div>
     </header>
-    <main>
-        <nav>
-            <button>Search</button>
-        </nav>
-        <section>
-            <div class="right-column">
-                <div class="right-row">
-                  <div class="right-column-1">
-                    <p>This is the first column in the first row.</p>
-                  </div>
-                  <div class="right-column-2">
-                    <p>This is the second column in the first row.</p>
-                  </div>
-                </div>
-                <div class="right-row">
-                  <div class="right-column-1">
-                    <p>This is the first column in the second row.</p>
-                  </div>
-                  <div class="right-column-2">
-                    <p>This is the second column in the second row.</p>
-                  </div>
-                </div>
-              </div>
-        </section>
-    </main>
-    
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>What movie would you love to watch?</h2>
+        <form action="#" method="get">
+            <label for="search"></label>
+            <input type="text" id="search" name="search">
+            <button type="submit" id='goButton'>Go</button>
+        </form>
+    </div>
+
+    <!-- Movie Name Label-->
+    <div class="movieName"><h3>Movie Name</h3></div>
+
+    <!-- Gif -->
+    <div class="gif">
+        <p>Gif</p>
+    </div>
+
+    <!-- Right Block -->
+    <div class="rightBlock">
+
+        <div class="right-row">
+            <div class="right-column-1">
+                <p>Summary</p>
+            </div>
+            <div class="right-column-2">
+                <p>Scores</p>
+            </div>
+        </div>
+
+        <div class="right-row">
+            <div class="right-column-1">
+                <p>Reviews</p>
+            </div>
+            <div class="right-column-2">
+                <p># of Stars</p>
+            </div>
+        </div>
+
+        <div class="addToFavs">
+            <button>Add to Favs</button>
+        </div>
+    </div>
 </body>
 </html>
