@@ -13,58 +13,62 @@
 <body>
     <!-- Header -->
     <header>Movie Reviews and GIFs
-        <div>
-            <button id="myFavsBtn">My Favs</button>
+        <div id="myFavs">
+            <button class="myFavsBtn">My Favs</button>
         </div>
     </header>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <h2>What movie would you love to watch?</h2>
-        <!-- action = url -->
-        <!-- method = HTTP method that will be used-->
-        <form action="#" method="get">
-            <!-- for = which form element the label is associated with -->
-            <label for="search"></label>
-            <!-- type = the type of input -->
-            <!-- name = name of form element -->
-            <input type="text" id="search" name="search">
-            <button type="submit" id='searchBtn'>Go</button>
-        </form>
-    </div>
-
-    <!-- Movie Name Label-->
-    <div class="movieName"><h3>Movie Name</h3></div>
-
-    <!-- Gif -->
-    <div class="movieGif">
-        <p>Gif</p>
-    </div>
-
-    <!-- Right Block -->
-    <div class="rightBlock">
-
-        <div class="right-row">
-            <div class="right-column-1">
-                <p>Summary</p>
-            </div>
-            <div class="right-column-2">
-                <p>Scores</p>
-            </div>
+    <main>
+        <!-- Navbar -->
+        <div class="navbar">
+            <h2>What movie would you love to watch?</h2>
+            <!-- action = url -->
+            <!-- method = HTTP method that will be used-->
+            <form action="#" method="get">
+                <!-- for = which form element the label is associated with -->
+                <label for="search"></label>
+                <!-- type = the type of input -->
+                <!-- name = name of form element -->
+                <input type="text" id="search" name="search">
+                <button type="submit" id='goBtn'>Go</button>
+            </form>
         </div>
 
-        <div class="right-row">
-            <div class="right-column-1">
-                <p>Reviews</p>
-            </div>
-            <div class="right-column-2">
-                <p># of Stars</p>
-            </div>
+        <!-- Movie Name Label-->
+        <div class="movieName">
+            <h3>Movie Name</h3>
         </div>
 
-        <div id="addToFavs">
-            <button class="addToFavs">Add to Favs</button>
+        <!-- Gif -->
+        <div class="movieGif">
+            <p>Gif</p>
         </div>
-    </div>
+
+        <!-- Right Block -->
+        <div class="rightBlock">
+
+            <div class="right-row">
+                <div class="right-column-1">
+                    <p>Summary</p>
+                </div>
+                <div class="right-column-2">
+                    <p>Scores</p>
+                </div>
+            </div>
+
+            <div class="right-row">
+                <div class="right-column-1">
+                    <p>Reviews</p>
+                </div>
+                <div class="right-column-2">
+                    <p># of Stars</p>
+                </div>
+            </div>
+
+            <div id="addToFavs">
+                <button class="addToFavs">Add to Favs</button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
