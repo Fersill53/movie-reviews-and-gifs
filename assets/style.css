@@ -1,9 +1,9 @@
 body {
      margin: 0%;
-     font-family: 'Prompt', sans-serif;}
-
-body {
-background-color: #d4d4d4;
+     font-family: 'Prompt', sans-serif;
+     background-color: rgb(226, 226, 226);
+     background-size: cover;
+     background-position: center;
 }
 
 header {
@@ -16,10 +16,8 @@ header {
      margin: 0px;
 }
 
-
-
-#myFavs {
-     
+h1 {
+     margin: 0;
 }
 
 .myFavsBtn {
@@ -40,7 +38,6 @@ header {
      justify-content: center;
      overflow: hidden;
      background-color: rgb(209, 0, 0);
-     padding: 10px 10px 10px 10px;
      margin: 25px 90px 0px 90px;
      height: auto;
      color: white;
