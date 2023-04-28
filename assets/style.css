@@ -1,9 +1,15 @@
-body {
+body, html {
      margin: 0%;
      font-family: 'Prompt', sans-serif;
-     background-color: rgb(226, 226, 226);
      background-size: cover;
      background-position: center;
+     height: 100%;
+     width: 100%;
+     background-image: url("../images/Film-Background.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-color: antiquewhite;
 }
 
 header {
@@ -15,6 +21,10 @@ header {
      border-bottom: 3px solid rgb(209, 0, 0);
      margin: 0px;
 }
+
+#myFavs {
+     background-image: url("../images/Film-Background.png");
+} 
 
 h1 {
      margin: 0;
