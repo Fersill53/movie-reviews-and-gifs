@@ -13,32 +13,24 @@ const gifUrl = "https://api.giphy.com/v1/gifs/search?api_key=Lelhn00NJhLelwpBhUe
 //input: search, go: goBtn
 const movBtn = document.getElementById('goBtn')
 
-movBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    fetch (omdbUrl)
-    .then(function(response){
-       return response.json();
-    })
-    .then(function(data) {
-        console.log(data);
-    })
-    .catch(function (error){
-        console.log(error);
-    });
-});
 
 movBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    fetch (gifUrl)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data);
-    })
-    .catch(function (error){
-        console.log(error);
-    });
-
+     event.preventDefault();
+Promise.all([
+	fetch(omdbUrl),
+	fetch(gifUrl)
+]).then(function (responses) {
+	// Get a JSON object from each of the responses
+	return Promise.all(responses.map(function (response) {
+		return response.json();
+	}));
+}).then(function (data) {
+	// Log the data to the console
+	// You would do something with both sets of data here
+	console.log(data);
+}).catch(function (error) {
+	// if there's an error, log it
+	console.log(error);
 });
 
+});
