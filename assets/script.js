@@ -1,11 +1,11 @@
 //omdb api and url
 const omdbKey = "e317d6f9";
-let movieTitle = "";
+let movieTitle = "mulan";
 const omdbUrl = " http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + movieTitle;
 console.log(omdbUrl);
 
 //giphy api and url
-let gifImage = "";
+let gifImage = "mulan";
 const gifUrl = "https://api.giphy.com/v1/gifs/search?api_key=Lelhn00NJhLelwpBhUe1XaTBsoJcTzvD&q=" + gifImage + "&limit=25&offset=0&rating=g&lang=en"
 
 
@@ -34,7 +34,7 @@ movBtn.addEventListener("click", function(event) {
         image1.appendChild(img);
         img.setAttribute("src", image);
 
-        
+
 
     }).catch(function (error) {
         // if there's an error, log it
