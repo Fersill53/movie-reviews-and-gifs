@@ -1,12 +1,15 @@
 //omdb api and url
+var movieTitle = "Skyfall";
 const omdbKey = "e317d6f9";
-let movieTitle = "mulan";
 const omdbUrl = " http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + movieTitle;
 console.log(omdbUrl);
 
 //giphy api and url
-let gifImage = "mulan";
+let gifImage = "Skyfall";
 const gifUrl = "https://api.giphy.com/v1/gifs/search?api_key=Lelhn00NJhLelwpBhUe1XaTBsoJcTzvD&q=" + gifImage + "&limit=25&offset=0&rating=g&lang=en"
+
+// var movieName = document.querySelector("#search");
+// var updatedMovieName = movieName.value;
 
 
 //id's to be used
@@ -33,6 +36,10 @@ movBtn.addEventListener("click", function(event) {
         var image = data[1].data[0].images.downsized.url; 
         image1.appendChild(img);
         img.setAttribute("src", image);
+
+
+
+
 
 
 
