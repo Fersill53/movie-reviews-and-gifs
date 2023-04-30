@@ -8,8 +8,8 @@ console.log(omdbUrl);
 let gifImage = "Skyfall";
 const gifUrl = "https://api.giphy.com/v1/gifs/search?api_key=Lelhn00NJhLelwpBhUe1XaTBsoJcTzvD&q=" + gifImage + "&limit=25&offset=0&rating=g&lang=en"
 
-// var movieName = document.querySelector("#search");
-// var updatedMovieName = movieName.value;
+//var movieName = document.querySelector("#search");
+//var movieTitle = gifImage = movieName.value;
 
 
 //id's to be used
