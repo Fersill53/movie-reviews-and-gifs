@@ -1,7 +1,7 @@
 //omdb api and url
 var movieTitle = "Skyfall";
 const omdbKey = "e317d6f9";
-const omdbUrl = " http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + movieTitle;
+const omdbUrl = " https://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + movieTitle;
 console.log(omdbUrl);
 
 //giphy api and url
