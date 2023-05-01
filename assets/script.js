@@ -9,6 +9,8 @@ var movieTitle = document.querySelector("#search");
 //id's to be used
 //input: search, go: goBtn
 const movBtn = document.getElementById('goBtn')
+const favBtn = document.getElementById('addToFavs')
+
 
 
 movBtn.addEventListener("click", function(event) {
@@ -18,8 +20,6 @@ movBtn.addEventListener("click", function(event) {
     var movieName = movieTitle.value;
     const omdbUrl = " https://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + movieName;
     const gifUrl = "https://api.giphy.com/v1/gifs/search?api_key=Lelhn00NJhLelwpBhUe1XaTBsoJcTzvD&q=" + movieName + "&limit=25&offset=0&rating=g&lang=en"
-
-
 
     Promise.all([
         fetch(omdbUrl),
@@ -51,7 +51,7 @@ movBtn.addEventListener("click", function(event) {
 
         var boxOfficeSection = (".boxOffice");
         var boxOffice = data[0].BoxOffice;
-        boxOfficeSection.textContent = "Box Office: " + boxOffice;//not displaying :(
+        boxOfficeSection.textContent = "Box Office: " + toString(boxOffice);//not displaying :(
         console.log (boxOffice);
 
         var actorsSection = document.querySelector (".actors");
@@ -65,5 +65,13 @@ movBtn.addEventListener("click", function(event) {
         // if there's an error, log it
         console.log(error);
     });
+    //Function to save favorites to local storage...no idea what I'm doing here, we may need a section to display the saved favorites
+    //favBtn.addEventListener("click", function(){
+        //var 
+       // localStorage.setItem()
+    
+    //})
 
 });
+
+
