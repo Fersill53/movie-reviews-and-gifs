@@ -1,30 +1,58 @@
 //omdb api and url
+var movieTitle = "Skyfall";
 const omdbKey = "e317d6f9";
-const movieTitle = "Shrek";
-const omdbUrl = " http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + movieTitle;
+const omdbUrl = " https://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + movieTitle;
 console.log(omdbUrl);
 
 //giphy api and url
-const gifKey = "JpAI2mazvDYpnE8lPMeIKCL07UmSmkHa";
-const gifUrl = "api.giphy.com/v1/gifs/searh";
+let gifImage = "Skyfall";
+const gifUrl = "https://api.giphy.com/v1/gifs/search?api_key=Lelhn00NJhLelwpBhUe1XaTBsoJcTzvD&q=" + gifImage + "&limit=25&offset=0&rating=g&lang=en"
+
+<<<<<<< HEAD
+//var movieName = document.querySelector("#search");
+//var movieTitle = gifImage = movieName.value;
+=======
+//var movieTitle = document.querySelector("#search");
+//var updatedMovieName = movieTitle.value;
+>>>>>>> 3bac8369278cb24d19dc351438a906d0534b8cfd
+
 
 //id's to be used
 //input: search, go: goBtn
 const movBtn = document.getElementById('goBtn')
 
+
 movBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    fetch (omdbUrl)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data) {
+     event.preventDefault();
+    Promise.all([
+        fetch(omdbUrl),
+        fetch(gifUrl)
+    ]).then(function (responses) {
+        // Get a JSON object from each of the responses
+        return Promise.all(responses.map(function (response) {
+            return response.json();
+        }));
+    }).then(function (data) {
+        // Log the data to the console
+        // You would do something with both sets of data here
         console.log(data);
-    })
-    .catch(function (error){
+        var image1 = document.querySelector(".movieGif");
+        var img = document.createElement("img");
+        var image = data[1].data[0].images.downsized.url; 
+        image1.appendChild(img);
+        img.setAttribute("src", image);
+
+
+
+
+
+
+
+
+
+    }).catch(function (error) {
+        // if there's an error, log it
         console.log(error);
     });
 
 });
-
-
