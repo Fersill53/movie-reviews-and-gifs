@@ -40,12 +40,23 @@ movBtn.addEventListener("click", function(event) {
         image1.appendChild(img);
         img.setAttribute("src", image);
 
-        //Code to display omdbURL
-        
+        //Code to display omdbURL data
+        var plotSection = document.querySelector(".plot");
+        var plot = data[0].Plot;
+        plotSection.textContent = "Plot: " + plot;
 
+        var ratingsSection = document.querySelector(".ratings");
+        var ratings = data[0].Ratings[1].Value;
+        ratingsSection.textContent = "Rotten Tomatoes: " + ratings; //do we want to add another section/p for Rotten Tomatoes?
 
+        var boxOfficeSection = (".boxOffice");
+        var boxOffice = data[0].BoxOffice;
+        boxOfficeSection.textContent = "Box Office: " + boxOffice;//not displaying :(
+        console.log (boxOffice);
 
-
+        var actorsSection = document.querySelector (".actors");
+        var actors = data[0].Actors;
+        actorsSection.textContent = "Actors: " + actors;
 
 //Need a function to reset page after each search
 
