@@ -8,8 +8,13 @@ console.log(omdbUrl);
 let gifImage = "Skyfall";
 const gifUrl = "https://api.giphy.com/v1/gifs/search?api_key=Lelhn00NJhLelwpBhUe1XaTBsoJcTzvD&q=" + gifImage + "&limit=25&offset=0&rating=g&lang=en"
 
+<<<<<<< HEAD
 //var movieName = document.querySelector("#search");
 //var movieTitle = gifImage = movieName.value;
+=======
+//var movieTitle = document.querySelector("#search");
+//var updatedMovieName = movieTitle.value;
+>>>>>>> 3bac8369278cb24d19dc351438a906d0534b8cfd
 
 
 //id's to be used
@@ -36,6 +41,8 @@ movBtn.addEventListener("click", function(event) {
         var image = data[1].data[0].images.downsized.url; 
         image1.appendChild(img);
         img.setAttribute("src", image);
+
+
 
 
 

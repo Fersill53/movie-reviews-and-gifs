@@ -8,19 +8,12 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet"> 
+    <!-- Bulma Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/style.css">
     <title>Movie Reviews and GIFs</title>
-    <!-- Only way this would work was placing the style here -->
-    <style>
-        body {
-            background-image: url("./images/Film-Background.png");
-        }
-        #myFavs {
-            background-image: url("./images/Film-Background.png");
-        } 
-    </style>
 </head>
 
 <body>
@@ -42,16 +35,17 @@
                 <label for="search"></label>
                 <!-- type = the type of input -->
                 <!-- name = name of form element -->
-                <input type="text" id="search" name="search">
+                <input type="text" id="search" name="search" placeholder="Movie Name">
                 <button type="submit" id='goBtn'>Go</button>
             </form>
         </div>
 
         <!-- Movie Name Label-->
+        <div class="column is-6">
         <div class="movieName">
             <h3>Movie Name</h3>
         </div>
-
+        </div>
         <!-- Gif -->
         <div class="movieGif">
             <p>Gif</p>
@@ -62,20 +56,20 @@
             <!-- Top row in right block -->
             <div class="right-row">
                 <div class="right-column-1">
-                    <p>Summary</p>
+                    <p class=" plot">Plot</p>
                 </div>
                 <div class="right-column-2">
-                    <p>Scores</p>
+                    <p class = "ratings">Ratings</p>
                 </div>
             </div>
             
             <!-- Bottom row in right block -->
             <div class="right-row">
                 <div class="right-column-1">
-                    <p>Reviews</p>
+                    <p class = "reviews">Reviews</p>
                 </div>
                 <div class="right-column-2">
-                    <p># of Stars</p>
+                    <p class = "boxOffice">Box Office $$$</p>
                 </div>
             </div>
 
