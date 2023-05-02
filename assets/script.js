@@ -49,9 +49,9 @@ movBtn.addEventListener("click", function(event) {
         var ratings = data[0].Ratings[1].Value;
         ratingsSection.textContent = "Rotten Tomatoes: " + ratings; //do we want to add another section/p for Rotten Tomatoes?
 
-        var boxOfficeSection = (".boxOffice");
+        var boxOfficeSection = document.querySelector(".boxOffice");
         var boxOffice = data[0].BoxOffice;
-        boxOfficeSection.textContent = "Box Office: " + toString(boxOffice);//not displaying :(
+        boxOfficeSection.textContent = "Box Office: " + boxOffice;
         console.log (boxOffice);
 
         var actorsSection = document.querySelector (".actors");
