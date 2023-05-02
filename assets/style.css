@@ -15,7 +15,7 @@ body, html {
 header {
      background-color: #333;
      color: #fff;
-     font-size: 150%;;
+     font-size: 200%;;
      padding: 5px 0px 20px 0px;
      text-align: center;
      border-bottom: 3px solid rgb(209, 0, 0);
@@ -51,6 +51,8 @@ h2 {
      justify-content: center;
      overflow: hidden;
      background-color: rgb(209, 0, 0);
+     box-shadow: 6px 6px 10px #626161;
+     border-radius: 5px;
      margin: 30px auto;
      height: auto;
      color: white;
@@ -61,7 +63,7 @@ h2 {
      max-width: 60%;
 }
 
-.navbar:hover {
+#navbar:hover {
      background-color: #333;
      color: #fff;
      border: 3px solid rgb(209, 0, 0);
@@ -74,7 +76,7 @@ h2 {
 
 #goBtn:hover {
      cursor: pointer;
-     background-color: rgb(44, 37, 37);
+     background-color: rgb(209, 0, 0);
      color: white;
 }
 
@@ -105,19 +107,22 @@ form {
      flex-wrap: wrap;
      justify-content: center;
      float: left;
-     height: 380px;
+     height: 400px;
      background-color: #ffffff;
      padding: 20px;
      margin: 30px 10px 30px 60px;
      border: 5px solid  #333;
      border-radius: 5px;
      box-shadow: 1px 1px 20px 5px #333333b5;
+     background-image: url("../images/Box-Background.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 
 #container {
      display: flex;
 }
-
 
 .boxes {
      display: flex;
@@ -130,8 +135,12 @@ form {
      min-height: 120px;
      border: 3px solid rgb(209, 0, 0);
      border-radius: 5px;
-     box-shadow: 4px 4px 4px #333333d3;
+     box-shadow: 6px 6px 10px #626161;
      margin: 30px 10px 15px 15px;
+     background-image: url("../images/Box-Background.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 
 #addToFavs {
