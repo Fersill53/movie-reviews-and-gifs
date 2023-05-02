@@ -1,8 +1,6 @@
 body, html {
      margin: 0%;
      font-family: 'Prompt', sans-serif;
-     background-size: cover;
-     background-position: center;
      height: 100%;
      width: 100%;
      background-image: url("../images/Film-Background.png");
@@ -13,16 +11,19 @@ body, html {
 }
 
 header {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
      background-color: #333;
      color: #fff;
      font-size: 200%;;
-     padding: 5px 0px 20px 0px;
      text-align: center;
      border-bottom: 3px solid rgb(209, 0, 0);
      margin: 0px;
 }
 
 #myFavs {
+     display: flex;
      background-image: url("../images/Film-Background.png");
 } 
 
@@ -46,9 +47,9 @@ h2 {
 
 #navbar {
      display: flex;
-     flex-direction: row;
-     flex-wrap: nowrap;
-     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     align-content: space-around;
      overflow: hidden;
      background-color: rgb(209, 0, 0);
      box-shadow: 6px 6px 10px #626161;
@@ -57,10 +58,10 @@ h2 {
      height: auto;
      color: white;
      border: 3px solid #333;
-     font-size: 120%;
-     align-items: baseline;
+     font-size: 150%;
      padding-bottom: 30px;
      max-width: 60%;
+     text-align: center;
 }
 
 #navbar:hover {
@@ -71,7 +72,7 @@ h2 {
 
 #goBtn {
      width: 40px;
-     height: 30px;
+     height: 25px;
 }
 
 #goBtn:hover {
@@ -83,23 +84,26 @@ h2 {
 #search {
      width: 250px;
      height: 25px;
-     margin-top: 13px;
+     margin-top: 15px;
 }
 
 form {
-     padding: 12px 0px 0px 15px;
+     padding: 5px;
      text-align: center;
      margin: 5px;
 }
 
-.movieName {
-     width: 100%;
-     text-align: center;
-     padding: 20px 20px 20px 20px;
-     margin: 0px 0px 0px 0px;
-     font-size: 135%;
+.column {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     flex-basis: flex-basis calc(50% - 10px);
 }
 
+#container {
+     display: flex;
+     flex-wrap: wrap;
+}
 
 .movieGif {
      display: flex;
@@ -118,10 +122,6 @@ form {
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
-}
-
-#container {
-     display: flex;
 }
 
 .boxes {
