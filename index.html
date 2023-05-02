@@ -18,7 +18,7 @@
 
 <body>
     <!-- Header -->
-    <header id="myFavs">
+    <header id="myFavs" class="column is-12">
         <h1>Movie Reviews and GIFs</h1>
         <button class="myFavsBtn">My Favs</button>
     </header>
@@ -26,8 +26,8 @@
     <!-- Main -->
     <main id="mainSection">
         <!-- Navbar -->
-        <!--12-->
-        <div class="navbar">
+        <!--12-->   
+        <div id="navbar" class="column is-12">
             <h2>What movie would you <i><u>love</u></i> to watch?</h2>
             <!-- action = url -->
             <!-- method = HTTP method that will be used-->
@@ -42,82 +42,37 @@
         </div>
 
         <!-- Movie Name Label-->
-        <div class="columns">
-            <div class="column is-6">
-                <div class="movieName">
-                    <h3>Movie Name</h3>
+        <div id="container">
+            <div class="column is-5 columnL movieGif"></div>
+
+            <div class="column is-3 columnC">
+                <div class="columnC boxes">
+                    <p class="plot"><b>Plot: </b>Always great to find out the plot behind movies. Helps you know if it's a movie you really want to watch!</p>
                 </div>
-                <div class="movieGif">
-                    <p>Gif</p>
+
+                <div class="columnC boxes">
+                    <p class="ratings"><b>Rating: </b>How sweet is your favorite movie? See what Rotten Tomatoes has to say!</p>
                 </div>
-            </div>
-            <div class="column is-3">
-                    <p>Summary</p>
-            </div>
-            <div class="column is-3">
-                     <p>Reviews</p>
             </div>
             
-        </div>
-        <!-- Right Block -->
-        <!-- 3 -->
-        <div class="columns">
-            <!-- Gif 6 -->
-            <div class="column is-6">
-        <div class="column is-3">
-        <div class="rightBlock">
-            <!-- Top row in right block -->
-            <div class="right-row">
-                <div class="right-column-1">
-                    <p class="plot">Plot</p>
+            <div class="column is-3 columnR">
+                <div class="columnC boxes">
+                    <p class="boxOffice"><b>$$s: </b>Movies rake in huge amounts of money. Check out the numbers movies have brought in over the years.</p>
                 </div>
 
-                <div class="right-column-2">
-                    <p class = "ratings">Ratings</p>
-
+                <div class="columnC boxes">
+                    <p class="actors"><b>Actors: </b>Always good to know if your favorite actor is in a movie you would like to watch.</p>
                 </div>
-                
-                     
             </div>
-            
-           
-                <div class="column is-3">
-                    <p>Scores</p>
-                </div>
-                <div class="column is-3">
-                    <p># of Stars</p>
-            </div>
-            <!-- Bottom row in right block -->
-            <div class="column is-3"></div>
-            <div class="right-row">
-
-                <div class="right-column-1">
-                    <p class = "actors">Actors</p>
-                </div>
-                <div class="right-column-2">
-                    <p class = "boxOffice">Box Office $$$</p>
-                </div>
-            <!-- <div class="rightBlock"> -->
-                <!-- Top row in right block -->
-                <!-- <div class="right-row"> -->
-                    
-                
         </div>
-                <!-- Bottom row in right block -->
-                <div class="column is-3"></div>
-                <div class="right-row">
-                
-                </div>
-                </div>
-
-                <!-- Add to favorites button 1-->
-                <div class="column is-1">
+        <div id="Container">
+            <!-- Add to favorites button 1-->
+            <div class="column is-12">
                 <div id="addToFavs">
                     <button class="addToFavs">Add to Favs</button>
                 </div>
             </div>
         </div>
-    </div>
     </main>
     <script src="./assets/script.js"></script>
 </body>
