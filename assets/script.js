@@ -40,14 +40,25 @@ movBtn.addEventListener("click", function(event) {
         image1.appendChild(img);
         img.setAttribute("src", image);
 
+        let movieGif = document.querySelector ('.movieGif')
+        movieGif.insertAdjacentElement('afterbegin', img);
+        document.querySelector("#search").value = '';
+
+        
+
         //Code to display omdbURL data
+        var movTitleSection = document.querySelector(".movieName");
+        var movTitle = data[0].Title;
+        movTitleSection.textContent = movTitle;
+        console.log (movTitle);
+
         var plotSection = document.querySelector(".plot");
         var plot = data[0].Plot;
         plotSection.textContent = "Plot: " + plot;
 
         var ratingsSection = document.querySelector(".ratings");
         var ratings = data[0].Ratings[1].Value;
-        ratingsSection.textContent = "Rotten Tomatoes: " + ratings; //do we want to add another section/p for Rotten Tomatoes?
+        ratingsSection.textContent = "Rotten Tomatoes: " + ratings; 
 
         var boxOfficeSection = document.querySelector(".boxOffice");
         var boxOffice = data[0].BoxOffice;
@@ -58,19 +69,21 @@ movBtn.addEventListener("click", function(event) {
         var actors = data[0].Actors;
         actorsSection.textContent = "Actors: " + actors;
 
-//Need a function to reset page after each search
+
+        favBtn.addEventListener("click", function(){  
+        var favs = [];
+        var favs = movTitle;
+        localStorage.setItem("addToFavs", favs);
+
+        
+})
 
 
     }).catch(function (error) {
         // if there's an error, log it
         console.log(error);
     });
-    //Function to save favorites to local storage...no idea what I'm doing here, we may need a section to display the saved favorites
-    //favBtn.addEventListener("click", function(){
-        //var 
-       // localStorage.setItem()
-    
-    //})
+
 
 });
 
