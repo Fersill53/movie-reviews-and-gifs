@@ -44,8 +44,6 @@ movBtn.addEventListener("click", function(event) {
         movieGif.insertAdjacentElement('afterbegin', img);
         document.querySelector("#search").value = '';
 
-        
-
         //Code to display omdbURL data
         var movTitleSection = document.querySelector(".movieName");
         var movTitle = data[0].Title;
@@ -70,13 +68,13 @@ movBtn.addEventListener("click", function(event) {
         actorsSection.textContent = "Actors: " + actors;
 
 
-        favBtn.addEventListener("click", function(){  
-        var favs = [];
-        var favs = movTitle;
-        localStorage.setItem("addToFavs", favs);
+        // favBtn.addEventListener("click", function(){  
+        // var favs = [];
+        // favs.push(movTitle);
+        // localStorage.setItem("addToFavs", JSON.stringify(favs));
+        //var searchHistory= JSON.parse(localStorage.getItem(“movTitle”));
 
-        
-})
+    //  })
 
 
     }).catch(function (error) {
