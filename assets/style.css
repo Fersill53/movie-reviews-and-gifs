@@ -106,12 +106,18 @@ form {
 }
 
 .movieGif {
+     text-align: center;
+     font-size: x-large;
+
+}
+.ovieGif {
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
      justify-content: center;
      float: left;
      height: 400px;
+     font-size: x-large;
      background-color: #ffffff;
      padding: 20px;
      margin: 30px 10px 30px 60px;

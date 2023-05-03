@@ -36,7 +36,11 @@ movBtn.addEventListener("click", function(event) {
         //This is the code that displays the GIFS on the webpage
         var image1 = document.querySelector(".movieGif");
         var img = document.createElement("img");
-        var image = data[1].data[0].images.downsized.url; 
+        var image = data[1].data[0].images.downsized.url;
+        img.style.border = "5px solid  #ffffff";
+        img.style.height = "300px";
+        img.style.margin = "30px 0px 0px 10px";
+        img.style.boxShadow = "1px 1px 20px 5px #333333b5";
         image1.appendChild(img);
         img.setAttribute("src", image);
 
