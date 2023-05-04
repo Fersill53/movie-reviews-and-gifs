@@ -1,8 +1,16 @@
 //omdb api and url
 //var movieTitle = "Skyfall";
 const omdbKey = "e317d6f9";
-
+var favsArray = []; 
 var movieTitle = document.querySelector("#search"); 
+var image1 = document.querySelector(".movieGif");
+var img = document.createElement("img");
+var plotSection = document.querySelector(".plot");
+var ratingsSection = document.querySelector(".ratings");
+var boxOfficeSection = document.querySelector(".boxOffice");
+var actorsSection = document.querySelector (".actors");
+var movTitleSection = document.querySelector(".movieName");
+        
 
 
 
@@ -34,8 +42,6 @@ movBtn.addEventListener("click", function(event) {
         // You would do something with both sets of data here
         console.log(data);
         //This is the code that displays the GIFS on the webpage
-        var image1 = document.querySelector(".movieGif");
-        var img = document.createElement("img");
         var image = data[1].data[0].images.downsized.url;
         img.style.border = "5px solid  #ffffff";
         img.style.height = "300px";
@@ -45,36 +51,32 @@ movBtn.addEventListener("click", function(event) {
         img.setAttribute("src", image);
 
         //Code to display omdbURL data
-        var plotSection = document.querySelector(".plot");
         var plot = data[0].Plot;
         plotSection.textContent = "Plot: " + plot;
 
-        var ratingsSection = document.querySelector(".ratings");
         var ratings = data[0].Ratings[1].Value;
-        ratingsSection.textContent = "Rotten Tomatoes: " + ratings; //do we want to add another section/p for Rotten Tomatoes?
+        ratingsSection.textContent = "Rotten Tomatoes: " + ratings; 
 
-        var boxOfficeSection = document.querySelector(".boxOffice");
         var boxOffice = data[0].BoxOffice;
         boxOfficeSection.textContent = "Box Office: " + boxOffice;
         console.log (boxOffice);
 
-        var actorsSection = document.querySelector (".actors");
         var actors = data[0].Actors;
         actorsSection.textContent = "Actors: " + actors;
 
-//Need a function to reset page after each search
+        var movTitle = data[0].Title;
+        movTitleSection.textContent = movTitle;
+        console.log (movTitle);
 
+        favBtn.addEventListener("click", function(){
+            favsArray.push(movTitle);
+            localStorage.setItem("Movie", favsArray);
+        });
 
     }).catch(function (error) {
         // if there's an error, log it
         console.log(error);
     });
-    //Function to save favorites to local storage...no idea what I'm doing here, we may need a section to display the saved favorites
-    //favBtn.addEventListener("click", function(){
-        //var 
-       // localStorage.setItem()
-    
-    //})
 
 });
 
