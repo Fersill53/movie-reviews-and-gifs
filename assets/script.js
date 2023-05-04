@@ -21,7 +21,7 @@ const favBtn = document.getElementById('addToFavs')
 favBtn.addEventListener("click", function(){
     favsArray.push(movTitle);
     localStorage.setItem("Movie", JSON.stringify(favsArray));
-    localStorage.getItem("")
+    var text = localStorage.getItem("#favoritesList");
 
 });
 
