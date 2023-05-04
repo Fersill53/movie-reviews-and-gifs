@@ -11,9 +11,6 @@ var boxOfficeSection = document.querySelector(".boxOffice");
 var actorsSection = document.querySelector (".actors");
 var movTitleSection = document.querySelector(".movieName");
         
-
-
-
 //id's to be used
 //input: search, go: goBtn
 const movBtn = document.getElementById('goBtn')
