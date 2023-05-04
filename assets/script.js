@@ -10,13 +10,20 @@ var ratingsSection = document.querySelector(".ratings");
 var boxOfficeSection = document.querySelector(".boxOffice");
 var actorsSection = document.querySelector (".actors");
 var movTitleSection = document.querySelector(".movieName");
+var movTitle;
+
         
 //id's to be used
 //input: search, go: goBtn
 const movBtn = document.getElementById('goBtn')
 const favBtn = document.getElementById('addToFavs')
 
+favBtn.addEventListener("click", function(){
+    favsArray.push(movTitle);
+    localStorage.setItem("Movie", JSON.stringify(favsArray));
+    localStorage.getItem("")
 
+});
 
 movBtn.addEventListener("click", function(event) {
      event.preventDefault();
@@ -66,16 +73,9 @@ movBtn.addEventListener("click", function(event) {
         var actors = data[0].Actors;
         actorsSection.textContent = "Actors: " + actors;
 
-
-        var movTitle = data[0].Title;
+        movTitle = data[0].Title;
         movTitleSection.textContent = movTitle;
         console.log (movTitle);
-
-
-        favBtn.addEventListener("click", function(){
-            favsArray.push(movTitle);
-            localStorage.setItem("Movie", favsArray);
-        });
 
     }).catch(function (error) {
         // if there's an error, log it
