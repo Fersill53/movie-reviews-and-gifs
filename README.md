@@ -13,6 +13,8 @@ Through this project we learned how to fetch data from APIs to build our website
 ## Usage
 Thre is no installation needed. Simply type the URL provided below and you will be directed to our website. Type the movie you are searching for in the search bar to check that movie's ratings, cast, and other relevant information.
 
-**add link and pics in this section
 
-## Credits
+    https://fersill53.github.io/movie-reviews-and-gifs/
+    ![screenshoot of finished page](assets/images/Screenshot 2023-05-03 at 8.54.08 PM.png)
+    
+
