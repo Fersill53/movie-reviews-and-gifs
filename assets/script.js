@@ -50,7 +50,12 @@ movBtn.addEventListener("click", function(event) {
         image1.appendChild(img);
         img.setAttribute("src", image);
 
+        let movieGif = document.querySelector ('.movieGif')
+        movieGif.insertAdjacentElement('afterbegin', img);
+        document.querySelector("#search").value = '';
+
         //Code to display omdbURL data
+
         var plot = data[0].Plot;
         plotSection.textContent = "Plot: " + plot;
 
@@ -64,9 +69,11 @@ movBtn.addEventListener("click", function(event) {
         var actors = data[0].Actors;
         actorsSection.textContent = "Actors: " + actors;
 
+
         var movTitle = data[0].Title;
         movTitleSection.textContent = movTitle;
         console.log (movTitle);
+
 
         favBtn.addEventListener("click", function(){
             favsArray.push(movTitle);
