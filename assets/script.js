@@ -1,8 +1,16 @@
 //omdb api and url
 //var movieTitle = "Skyfall";
 const omdbKey = "e317d6f9";
-
+var favsArray = []; 
 var movieTitle = document.querySelector("#search"); 
+var image1 = document.querySelector(".movieGif");
+var img = document.createElement("img");
+var plotSection = document.querySelector(".plot");
+var ratingsSection = document.querySelector(".ratings");
+var boxOfficeSection = document.querySelector(".boxOffice");
+var actorsSection = document.querySelector (".actors");
+var movTitleSection = document.querySelector(".movieName");
+        
 
 
 
@@ -34,9 +42,11 @@ movBtn.addEventListener("click", function(event) {
         // You would do something with both sets of data here
         console.log(data);
         //This is the code that displays the GIFS on the webpage
-        var image1 = document.querySelector(".movieGif");
-        var img = document.createElement("img");
-        var image = data[1].data[0].images.downsized.url; 
+        var image = data[1].data[0].images.downsized.url;
+        img.style.border = "5px solid  #ffffff";
+        img.style.height = "300px";
+        img.style.margin = "30px 0px 0px 10px";
+        img.style.boxShadow = "1px 1px 20px 5px #333333b5";
         image1.appendChild(img);
         img.setAttribute("src", image);
 
@@ -45,43 +55,35 @@ movBtn.addEventListener("click", function(event) {
         document.querySelector("#search").value = '';
 
         //Code to display omdbURL data
-        var movTitleSection = document.querySelector(".movieName");
-        var movTitle = data[0].Title;
-        movTitleSection.textContent = movTitle;
-        console.log (movTitle);
 
-        var plotSection = document.querySelector(".plot");
         var plot = data[0].Plot;
         plotSection.textContent = "Plot: " + plot;
 
-        var ratingsSection = document.querySelector(".ratings");
         var ratings = data[0].Ratings[1].Value;
         ratingsSection.textContent = "Rotten Tomatoes: " + ratings; 
 
-        var boxOfficeSection = document.querySelector(".boxOffice");
         var boxOffice = data[0].BoxOffice;
         boxOfficeSection.textContent = "Box Office: " + boxOffice;
         console.log (boxOffice);
 
-        var actorsSection = document.querySelector (".actors");
         var actors = data[0].Actors;
         actorsSection.textContent = "Actors: " + actors;
 
 
-        // favBtn.addEventListener("click", function(){  
-        // var favs = [];
-        // favs.push(movTitle);
-        // localStorage.setItem("addToFavs", JSON.stringify(favs));
-        //var searchHistory= JSON.parse(localStorage.getItem(“movTitle”));
+        var movTitle = data[0].Title;
+        movTitleSection.textContent = movTitle;
+        console.log (movTitle);
 
-    //  })
 
+        favBtn.addEventListener("click", function(){
+            favsArray.push(movTitle);
+            localStorage.setItem("Movie", favsArray);
+        });
 
     }).catch(function (error) {
         // if there's an error, log it
         console.log(error);
     });
-
 
 });
 

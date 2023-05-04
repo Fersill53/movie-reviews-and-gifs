@@ -1,8 +1,6 @@
 body, html {
      margin: 0%;
      font-family: 'Prompt', sans-serif;
-     background-size: cover;
-     background-position: center;
      height: 100%;
      width: 100%;
      background-image: url("../images/Film-Background.png");
@@ -13,16 +11,19 @@ body, html {
 }
 
 header {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
      background-color: #333;
      color: #fff;
-     font-size: 135%;;
-     padding: 5px 0px 20px 0px;
+     font-size: 200%;;
      text-align: center;
      border-bottom: 3px solid rgb(209, 0, 0);
      margin: 0px;
 }
 
 #myFavs {
+     display: flex;
      background-image: url("../images/Film-Background.png");
 } 
 
@@ -30,6 +31,9 @@ h1 {
      margin: 0;
 }
 
+h2 {
+     font-size: 135%;
+}
 .myFavsBtn {
      width: 100px;
      height: 30px;
@@ -41,21 +45,26 @@ h1 {
      background-color: white;
 }
 
-.navbar {
+#navbar {
      display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     align-content: space-around;
      overflow: hidden;
      background-color: rgb(209, 0, 0);
-     margin: 25px 90px 0px 90px;
+     box-shadow: 6px 6px 10px #626161;
+     border-radius: 5px;
+     margin: 30px auto;
      height: auto;
      color: white;
      border: 3px solid #333;
-     font-size: 120%;
+     font-size: 150%;
+     padding-bottom: 30px;
+     max-width: 60%;
+     text-align: center;
 }
 
-.navbar:hover {
+#navbar:hover {
      background-color: #333;
      color: #fff;
      border: 3px solid rgb(209, 0, 0);
@@ -63,7 +72,7 @@ h1 {
 
 #goBtn {
      width: 40px;
-     height: 30px;
+     height: 25px;
 }
 
 #goBtn:hover {
@@ -75,66 +84,69 @@ h1 {
 #search {
      width: 250px;
      height: 25px;
-     margin-top: 13px;
+     margin-top: 15px;
 }
 
 form {
-     padding: 12px 0px 0px 15px;
+     padding: 5px;
      text-align: center;
      margin: 5px;
 }
 
-.movieName {
-     width: 40%;
+.column {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     flex-basis: flex-basis calc(50% - 10px);
+}
+
+#container {
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.movieGif {
      text-align: center;
-     padding: 20px 0px 0px 0px;
-     margin: 0px 0px 0px 60px;
+     font-size: x-large;
 
 }
-.movieGif {
+.ovieGif {
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
      justify-content: center;
      float: left;
-     width: 38%;
-     height: 260px;
+     height: 400px;
+     font-size: x-large;
      background-color: #ffffff;
      padding: 20px;
-     margin: 0px 10px 40px 50px;
+     margin: 30px 10px 30px 60px;
      border: 5px solid  #333;
      border-radius: 5px;
      box-shadow: 1px 1px 20px 5px #333333b5;
+     background-image: url("../images/Box-Background.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 
-.rightBlock {
+.boxes {
      display: flex;
      flex-direction: column;
      flex-wrap: wrap;
-     float: right;
-     width: 45%;
-     height: 100%;
-     padding: 0px 0px 20px 20px;
-     margin: 0px 50px 20px 10px;
-}
-
-.right-row {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
-     margin-bottom: 20px;
-}
-
-.right-column-1,
-.right-column-2 {
-     width: 48%;
      background-color: #ffffff;
      padding: 20px;
      box-sizing: border-box;
-     height: 140px;
+     height: fit-content;
+     min-height: 120px;
      border: 3px solid rgb(209, 0, 0);
      border-radius: 5px;
-     box-shadow: 4px 4px 4px #333333d3;
+     box-shadow: 6px 6px 10px #626161;
+     margin: 30px 10px 15px 15px;
+     background-image: url("../images/Box-Background.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 
 #addToFavs {

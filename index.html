@@ -17,17 +17,16 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header id="myFavs">
+    <!-- Header column-12 -->
+    <header id="myFavs" class="column is-12">
         <h1>Movie Reviews and GIFs</h1>
         <button class="myFavsBtn">My Favs</button>
     </header>
 
     <!-- Main -->
     <main id="mainSection">
-        <!-- Navbar -->
-        <!--12-->
-        <div class="navbar">
+        <!-- Navbar column-12 -->  
+        <div id="navbar" class="column is-12">
             <h2>What movie would you <i><u>love</u></i> to watch?</h2>
             <!-- action = url -->
             <!-- method = HTTP method that will be used-->
@@ -42,56 +41,47 @@
         </div>
 
         <!-- Movie Name Label-->
-        <div class="column is-6">
-        <div class="movieName">
-            <h3>Movie Name</h3>
-        </div>
-        </div>
-        <!-- Gif 6 -->
-        <div class="column is 6">
-        <div class="movieGif">
-            <p>Gif</p>
-        </div>
-        </div>
-
-        <!-- Right Block -->
-        <!-- 3 -->
-        <div class="column is 3">
-        <div class="rightBlock">
-            <!-- Top row in right block -->
-            <div class="right-row">
-                <div class="right-column-1">
-                    <p class="plot">Plot</p>
-                </div>
-
-                <div class="right-column-2">
-                    <p class = "ratings">Ratings</p>
-
-                </div>
+        <div id="container">
+            <div class="column is-5 columnL movieGif">
+                <p><b class = "movieName">Sit back...relax...and enjoy..</b></p>
                 
             </div>
-            </div>
-            <!-- Bottom row in right block -->
-            <div class="column is 3"></div>
-            <div class="right-row">
 
-                <div class="right-column-1">
-                    <p class = "actors">Actors</p>
+            <div class="column is-3 columnC">
+                <div class="columnC boxes">
+                    <p class="plot"><u><b>Plot:</b></u> Always great to find out the plot behind movies. Helps you know if it's a movie you really want to watch!</p>
                 </div>
-                <div class="right-column-2">
-                    <p class = "boxOffice">Box Office $$$</p>
+
+                <div class="columnC boxes">
+                    <p class="ratings"><u><b>Rating:</b></u> How sweet is your favorite movie? See what Rotten Tomatoes has to say!</p>
                 </div>
             </div>
-            </div>
+            
+            <div class="column is-3 columnR">
+                <div class="columnC boxes">
+                    <p class="boxOffice"><u><b>$$s:</b></u> Movies rake in huge amounts of money. Check out the numbers movies have brought in over the years.</p>
+                </div>
 
-            <!-- Add to favorites button 1-->
-            <div class="column is 1">
-            <div id="addToFavs">
-                <button class="addToFavs">Add to Favs</button>
+                <div class="columnC boxes">
+                    <p class="actors"><u><b>Actors:</b></u> Always good to know if your favorite actor is in a movie you would like to watch.</p>
+                </div>
             </div>
             <!--Favs Display Box-->
             <div class = "favsDisplay"></div>
         </div>
+        <div id="Container">
+            <!-- Add to favorites button 1-->
+            <div class="column is-12">
+                <div id="addToFavs">
+                    <button class="addToFavs">Add to Favs</button>
+                        <div id = "favoritesList">
+                            <ul>
+                                <li>Shrek</li>
+                            </ul>
+
+                        </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="./assets/script.js"></script>
