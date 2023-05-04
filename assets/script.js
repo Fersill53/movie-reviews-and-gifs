@@ -18,10 +18,16 @@ var movTitle;
 const movBtn = document.getElementById('goBtn')
 const favBtn = document.getElementById('addToFavs')
 
+//local storage
 favBtn.addEventListener("click", function(){
     favsArray.push(movTitle);
     localStorage.setItem("Movie", JSON.stringify(favsArray));
-    var text = localStorage.getItem("#favoritesList");
+    var text = localStorage.getItem("Movie");
+    var favoritesList = document.querySelector("#favoritesList");
+    favoritesList.textContent = JSON.parse(text);
+    
+    
+  
 
 });
 
