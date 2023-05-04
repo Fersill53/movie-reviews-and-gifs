@@ -25,14 +25,17 @@ favBtn.addEventListener("click", function(){
     var text = localStorage.getItem("Movie");
     var favoritesList = document.querySelector("#favoritesList");
     favoritesList.textContent = JSON.parse(text);
-    
-    
-  
-
+    favoritesList.style.display = "flex";
+    favoritesList.style.flexDirection = "row";
+    favoritesList.style.flexWrap = "wrap";
+    favoritesList.style.paddingTop = "10px";
+    favoritesList.style.borderTop = "3px solid #333";
+    favoritesList.style.marginTop = "5px";
+    favoritesList.style.justifyContent = "space-around";
 });
 
 movBtn.addEventListener("click", function(event) {
-     event.preventDefault();
+    event.preventDefault();
 
 //Allows user input 
     var movieName = movieTitle.value;
@@ -55,7 +58,7 @@ movBtn.addEventListener("click", function(event) {
         var image = data[1].data[0].images.downsized.url;
         img.style.border = "5px solid  #ffffff";
         img.style.height = "300px";
-        img.style.margin = "30px 0px 0px 10px";
+        img.style.margin = "30px 0px 15px 10px";
         img.style.boxShadow = "1px 1px 20px 5px #333333b5";
         image1.appendChild(img);
         img.setAttribute("src", image);
