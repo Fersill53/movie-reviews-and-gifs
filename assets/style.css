@@ -106,11 +106,16 @@ form {
 }
 
 .movieGif {
+     display: flex;
+     flex-direction: column;
      text-align: center;
-     font-size: x-large;
+     font-size: xxx-large;
 }
 
 .movieName {
+     display: flex;
+     flex-direction: column;
+
      margin-top: 10px;
 }
 
