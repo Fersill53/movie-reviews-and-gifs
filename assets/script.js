@@ -68,8 +68,10 @@ movBtn.addEventListener("click", function(event) {
         document.querySelector("#search").value = '';
 
         //Code to display omdbURL data
-
-        var plot = data[0].Plot;
+        if(!data[0].plot === undefined)
+                var plot = data[0].Plot;
+        else
+                var plot = "Plot is unknown!";
         plotSection.textContent = "Plot: " + plot;
 
         var ratings = data[0].Ratings[1].Value;
